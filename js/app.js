@@ -35,8 +35,6 @@ Enemy.prototype.reset = function() {
     this.v = randomNum(25,125);
 };
 
-
-
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
@@ -99,6 +97,18 @@ var player = new Player(200, 385);
 
 function randomNum(a, b) {
     return Math.round((Math.random() * (b - a)) + a);
+}
+
+function distance(x1, x2, y1, y2) {
+    return Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+}
+
+function checkCollisions () {
+    allEnemies.forEach(function(enemy){
+        if(distance(player.x, enemy.x, player.y, enemy.y) < 50){
+            player.reset();
+        }
+    });
 }
 
 // This listens for key presses and sends the keys to your
