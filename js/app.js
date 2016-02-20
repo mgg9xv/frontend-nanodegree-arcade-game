@@ -1,12 +1,12 @@
 // Enemies our player must avoid
-var Enemy = function(x, y) {
+var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.x = x;
-    this.y = y;
+    this.x = randomNum(-100, -250);
+    this.y = (randomNum(0,2) * 85) + 62.5;
     this.v = randomNum(25, 125);
     this.sprite = 'images/enemy-bug.png';
 };
@@ -19,8 +19,7 @@ Enemy.prototype.update = function(dt) {
     // all computers.
     this.x = this.x + (dt * this.v);
     if (this.x > 500) {
-        this.x = -100;
-        this.v = randomNum(25,125);
+        this.reset();
     }
 };
 
@@ -28,6 +27,12 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     // console.log("Rendering Enemy object");
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+Enemy.prototype.reset = function() {
+    this.x = randomNum(-100, -150);
+    this.y = (randomNum(0,2) * 85) + 62.5;
+    this.v = randomNum(25,125);
 };
 
 
@@ -43,12 +48,19 @@ var Player = function(x, y) {
 };
 
 Player.prototype.update = function(dt) {
-    // if(this.update)
+    if (this.y < 0) {
+        this.reset();
+    }
 };
 
 Player.prototype.render = function() {
     // console.log("Rendering Player object");
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+Player.prototype.reset = function() {
+    this.x = 200;
+    this.y = 385;
 };
 
 Player.prototype.handleInput = function(dir) {
@@ -67,7 +79,7 @@ Player.prototype.handleInput = function(dir) {
             }
             break;
         case "up":
-            if( this.y > 100) {
+            if( this.y > 0) {
                 this.y = this.y - yDist;
             }
             break;
@@ -82,11 +94,11 @@ Player.prototype.handleInput = function(dir) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-var allEnemies = [ new Enemy(25,62.5), new Enemy(50, 147.5), new Enemy(50, 232.5)];
+var allEnemies = [ new Enemy(), new Enemy(), new Enemy()];
 var player = new Player(200, 385);
 
 function randomNum(a, b) {
-    return (Math.random() * (b - a)) + a;
+    return Math.round((Math.random() * (b - a)) + a);
 }
 
 // This listens for key presses and sends the keys to your
