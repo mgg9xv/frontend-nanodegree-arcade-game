@@ -1,3 +1,6 @@
+var score = 0;
+var lives = 10;
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
@@ -47,6 +50,8 @@ var Player = function(x, y) {
 
 Player.prototype.update = function(dt) {
     if (this.y < 0) {
+        score++;
+        updateScore();
         this.reset();
     }
 };
@@ -106,9 +111,27 @@ function distance(x1, x2, y1, y2) {
 function checkCollisions () {
     allEnemies.forEach(function(enemy){
         if(distance(player.x, enemy.x, player.y, enemy.y) < 50){
+            lives--;
+            updateLives();
             player.reset();
         }
     });
+}
+
+function updateScore() {
+    document.getElementById('score').innerHTML = 'Score: '+ score ;
+}
+
+function updateLives() {
+    document.getElementById('lives-count').innerHTML = ' X '+ lives;
+    if(lives === 0) {
+        alert("You have lost all your lives. Press OK to play again.");
+        score = 0;
+        updateScore();
+        lives = 10;
+        updateLives();
+
+    }
 }
 
 // This listens for key presses and sends the keys to your
