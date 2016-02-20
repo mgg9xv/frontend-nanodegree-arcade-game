@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    background-color: #10CA7E;
+    font-family: 'Rock Salt', cursive;
+    color: #e8fdf4;
+    font-size: 36px;
+}
+
+h1 {
+    text-decoration: underline;
+    font-size: 48px;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+#stats {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#lives {
+    justify-content: center;
+    align-items: center;
+}
+
+#lives-count {
+    font-size: 36px;
+}
