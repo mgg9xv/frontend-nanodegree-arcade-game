@@ -34,3 +34,11 @@ h1 {
 #lives-count {
     font-size: 36px;
 }
+
+.directional-button {
+    font-size: 12px;
+    background-color: white;
+    height: 36px;
+    width: 36px;
+
+}
