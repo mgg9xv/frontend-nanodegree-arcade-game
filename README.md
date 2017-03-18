@@ -9,7 +9,7 @@ For detailed instructions on how to get started, check out this [guide](https://
 
 ### Running the game
 
-In order to run the game one simply needs to navigate to the [github page](http://mgg9xv.github.io/frontend-nanodegree-arcade-game)
+In order to run the game one simply needs to navigate to the [github page](https://mggwxyz.github.io/frontend-nanodegree-arcade-game)
 
 ### Playing the game
 

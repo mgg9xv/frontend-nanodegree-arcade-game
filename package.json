@@ -1,0 +1,23 @@
+{
+  "name": "frontend-nanodegree-arcade-game",
+  "version": "1.0.0",
+  "description": "Arcade Game project for Udacity's Front-end Nanodgree",
+  "main": "./js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"Attempting to serve files to http://localhost:8080 \n\" && http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mggwxyz/frontend-nanodegree-arcade-game.git"
+  },
+  "author": "Michael Gilbertson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mggwxyz/frontend-nanodegree-arcade-game/issues"
+  },
+  "homepage": "https://github.com/mggwxyz/frontend-nanodegree-arcade-game#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
