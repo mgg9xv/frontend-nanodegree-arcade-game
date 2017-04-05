@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
+
     <meta charset="UTF-8">
-    <title>Effective JavaScript: Frogger</title>
-    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arcade Game | Front-end Nanodegree</title>
+
+    <link rel="icon" href="images/arcade-game-favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/main.min.css">
+
 </head>
 <body>
-    <div class="flex-box">
+
+    <div id="root-container">
+
         <!-- Menu Section-->
-        <div id="menu" class="flex-item">
-            <h1>Frogger</h1>
-            <div id="score">Score: 0</div>
-            <div id="lives" class="flex-box">
-                <img src="./images/Heart.png">
-                <span id="lives-count"> X 10</span>
+        <div id="menu">
+            <header>
+                <h1>Runner</h1>
+            </header>
+
+            <div id="stats-container">
+                <div id="score">Score: 0</div>
+                <div id="lives" class="flex-box">
+                    <img class="heart-img" src="images/src/Heart.png">
+                    <img class="heart-img" src="images/src/Heart.png">
+                    <img class="heart-img" src="images/src/Heart.png">
+                    <img class="heart-img" src="images/src/Heart.png">
+                    <img class="heart-img" src="images/src/Heart.png">
+                </div>
             </div>
         </div>
+
         <!-- Game Section-->
         <div id="game" class="flex-item"></div>
+        <div id="direction-pad">
+            <div class="direction-pad-row">
+                <button id="up-arrow" class="direction-button">&uarr;</button>
+            </div>
+            <div class="direction-pad-row">
+                <button id="left-arrow" class="direction-button">&larr;</button>
+                <button id="right-arrow" class="direction-button">&rarr;</button>
+            </div>
+            <div class="direction-pad-row">
+                <button id="down-arrow" class="direction-button">&darr;</button>
+            </div>
+        </div>
     </div>
-    <!-- Loading all external JavaScript resources -->
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
+
+    <script src="js/main.min.js"></script>
+
 </body>
 </html>
