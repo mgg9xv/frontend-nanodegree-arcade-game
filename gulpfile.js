@@ -11,6 +11,7 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var ghPages = require('gulp-gh-pages');
 var uglify = require('gulp-uglify');
+var responsive = require('gulp-responsive');
 
 gulp.task('watch', ['browserSync', 'sass'],function(){
     gulp.watch('src/scss/*', ['sass']);
@@ -44,11 +45,34 @@ gulp.task('useref', function(){
 });
 
 gulp.task('images', function() {
-    return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg|ico)')
+    return gulp.src('src/images/*')
         .pipe(imagemin({
             interlaced: true,
         }))
         .pipe(gulp.dest('dist/images'))
+});
+
+gulp.task('generate-images', function() {
+    del.sync('src/images/*.png');
+    return gulp.src('src/images/src/**/*.png')
+        .pipe(responsive({
+            '*.png': [{
+                width: 101,
+                rename: { suffix: '-large' },
+            },{
+                width: 75,
+                rename: { suffix: '-medium' },
+            },{
+                width: 50,
+                rename: { suffix: '-small' },
+            }]
+        }, {
+            progressive: true,
+            compressionLevel: 6,
+            withMetadata: false,
+            strictMatchImages: false
+        }))
+        .pipe(gulp.dest('src/images'))
 });
 
 gulp.task('clean', function() {
@@ -61,7 +85,7 @@ gulp.task('clean:dist', function() {
 
 gulp.task('default', function(callback) {
     runSequence(
-        ['sass', 'browserSync'],
+        ['generate-images', 'sass', 'browserSync'],
         'watch',
         callback
     )
@@ -70,6 +94,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
     runSequence(
         'clean:dist',
+        'generate-images',
         'sass',
         ['useref', 'images'],
         callback

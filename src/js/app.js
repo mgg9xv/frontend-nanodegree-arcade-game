@@ -1,13 +1,25 @@
 //Global variables to keep track of the player's score and lives remaining.
 var score = 0;
-var lives = 10;
+var lives = 5;
+var suffix, scale;
+
+if( window.innerWidth < 1000) {
+    suffix = '-small';
+    scale = 0.5;
+} else if (window.innerWidth < 1400 ) {
+    suffix = '-medium';
+    scale = 0.75;
+} else {
+    suffix = '-large';
+    scale = 1;
+}
 
 // Enemies our player must avoid
 var Enemy = function() {
     // Set up the enemy's random x,y positions so they are on the street
     // with a random velocity
     this.x = randomNum(-100, -250);
-    this.y = (randomNum(0,2) * 85) + 62.5;
+    this.y = (randomNum(0,2) * (85 * scale)) + (62.5 * scale);
     this.v = randomNum(25, 125);
 
     // Variables applied to each of our instances go here,
@@ -15,7 +27,7 @@ var Enemy = function() {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+    this.sprite = 'images/enemy-bug' + suffix + '.png';
 };
 
 // Update the enemy's position, required method for game
@@ -31,7 +43,7 @@ Enemy.prototype.update = function(dt) {
 
     // If the enemy's x position is greater than 500, it will off the board
     // and we will reset it's position to the left of the board
-    if (this.x > 500) {
+    if (this.x > (500 * scale)) {
         this.reset();
     }
 };
@@ -55,7 +67,7 @@ Enemy.prototype.reset = function() {
 var Player = function(x, y) {
     this.x = x;
     this.y = y;
-    this.sprite = 'images/char-boy.png';
+    this.sprite = 'images/char-boy' + suffix + '.png';
 };
 
 // Function checks if player is on other side of road and resets them
@@ -74,15 +86,15 @@ Player.prototype.render = function() {
 
 // Function resets the players position to the bottom of the board
 Player.prototype.reset = function() {
-    this.x = 200;
-    this.y = 385;
+    this.x = 200 * scale;
+    this.y = 385 * scale;
 };
 
 // Function for updating player position based on user input and makes
 // sure the player will not be able to move off the board.
 Player.prototype.handleInput = function(dir) {
-    var xDist = 100;
-    var yDist = 85;
+    var xDist = 100 * scale;
+    var yDist = 85 * scale;
     switch (dir){
         case "left":
             if( this.x > 0) {
@@ -90,7 +102,7 @@ Player.prototype.handleInput = function(dir) {
             }
             break;
         case "right":
-            if( this.x < 400) {
+            if( this.x < 400 * scale) {
                 this.x = this.x + xDist;
             }
             break;
@@ -100,7 +112,7 @@ Player.prototype.handleInput = function(dir) {
             }
             break;
         case "down":
-            if( this.y < 385) {
+            if( this.y < 385 * scale) {
                 this.y = this.y + yDist;
             }
             break;
@@ -111,7 +123,7 @@ Player.prototype.handleInput = function(dir) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 var allEnemies = [ new Enemy(), new Enemy(), new Enemy()];
-var player = new Player(200, 385);
+var player = new Player(200 * scale, 385 * scale);
 
 // Function returns random integer between two numbers
 function randomNum(a, b) {
@@ -127,7 +139,7 @@ function distance(x1, x2, y1, y2) {
 // resets them to the beginning and takes away a life
 function checkCollisions () {
     allEnemies.forEach(function(enemy){
-        if(distance(player.x, enemy.x, player.y, enemy.y) < 50){
+        if(distance(player.x, enemy.x, player.y, enemy.y) < (50 * scale)) {
             lives--;
             updateLives();
             player.reset();
@@ -143,7 +155,14 @@ function updateScore() {
 // Updates number of lives remaining on the screen. If no lives are left
 // the game will reset
 function updateLives() {
-    document.getElementById('lives-count').innerHTML = ' X '+ lives;
+    var livesHTML = '';
+    var i = 0;
+    while ( i < lives ) {
+        livesHTML += "<img class='heart-img' src='images/src/Heart.png'>";
+        i++;
+    }
+    document.getElementById('lives').innerHTML = livesHTML;
+
     if(lives === 0) {
         alert("You have lost all your lives. Press OK to play again.");
         score = 0;
@@ -156,6 +175,7 @@ function updateLives() {
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
+    e.preventDefault();
     var allowedKeys = {
         37: 'left',
         38: 'up',
@@ -164,4 +184,21 @@ document.addEventListener('keyup', function(e) {
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
+});
+
+document.querySelector('#up-arrow').addEventListener('click', function(e) {
+    e.preventDefault();
+    player.handleInput('up');
+});
+document.querySelector('#left-arrow').addEventListener('click', function(e) {
+    e.preventDefault();
+    player.handleInput('left');
+});
+document.querySelector('#right-arrow').addEventListener('click', function(e) {
+    e.preventDefault();
+    player.handleInput('right');
+});
+document.querySelector('#down-arrow').addEventListener('click', function(e) {
+    e.preventDefault();
+    player.handleInput('down');
 });

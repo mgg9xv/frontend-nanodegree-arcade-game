@@ -376,13 +376,16 @@ html, body {
   height: 100%;
   width: 100%;
   text-align: center;
-  background-color: #10CA7E;
+  background-color: #10f09e;
   font-family: 'Arial';
-  color: #e8fdf4;
+  color: #0b2517;
   font-size: 16px; }
 
 h1 {
-  font-size: 2rem; }
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-style: italic; }
 
 #root-container {
   height: 100%;
@@ -401,7 +404,8 @@ h1 {
 
 #stats-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center; }
 
 .stat {
@@ -413,26 +417,32 @@ h1 {
   align-items: center; }
 
 #lives-count {
-  font-size: 36px; }
+  font-size: 1rem; }
 
 .direction-button {
-  font-size: 12px;
-  border: 1px solid white;
-  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 2rem;
+  color: #0b2517;
   background-color: #10CA7E;
-  /*border-radius: 4px;*/ }
+  transition: background-color 100ms, color 100ms;
+  outline: none; }
+  .direction-button:hover, .direction-button:focus {
+    outline: none;
+    background-color: #0b2517;
+    color: #10f09e; }
 
 #direction-pad {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  height: 48px;
-  width: 48px; }
+  height: 10rem;
+  width: 10rem; }
 
 .direction-pad-row {
   display: flex;
   justify-content: space-around; }
 
-#up-arrow {
-  /*align-self: flex-start;*/ }
+.heart-img {
+  width: 2rem; }
