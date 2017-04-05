@@ -56,7 +56,7 @@ Enemy.prototype.render = function() {
 // Resets the enemy to a random position left of the board with random velocity
 Enemy.prototype.reset = function() {
     this.x = randomNum(-100, -150);
-    this.y = (randomNum(0,2) * 85) + 62.5;
+    this.y = (randomNum(0,2) * 85 * scale) + (62.5 * scale);
     this.v = randomNum(25,125);
 };
 

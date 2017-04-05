@@ -105,6 +105,7 @@ gulp.task('deploy', function(){
     gulp.src('./dist/**/*')
         .pipe(ghPages({
             origin: "origin",
-            branch: "gh-pages"
+            branch: "gh-pages",
+            force: true
         }));
 });

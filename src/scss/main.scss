@@ -1,20 +1,22 @@
 @import "normalize";
 
-$color_off_white: #fdfdfd;
+$color_off_white: #f6f6f6;
 $color_light_green: #10f09e;
 $color_mid_green: #10CA7E;
-$color_dark_green: #0b2517;
+$color_dark_green: #114632;
 
 * {
     border-sizing: border-box;
 }
 
 html, body {
+    padding: 0;
+    margin: 0;
     height: 100%;
     width: 100%;
     text-align: center;
-    background-color: $color_light_green;
-    font-family: 'Arial';
+    background-color: #c5ffe7;
+    font-family: 'Courier';
     color: $color_dark_green;
     font-size: 16px;
 }
@@ -27,14 +29,18 @@ h1 {
 }
 
 #root-container {
+    padding: 0;
+    margin: 0;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
 }
 
 #menu {
+    //background-color: $color_dark_green;
     display: flex;
     flex-direction: column;
 }
@@ -82,6 +88,8 @@ h1 {
 }
 
 #direction-pad {
+    align-self: center;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -97,4 +105,24 @@ h1 {
 
 .heart-img {
     width: 2rem;
+}
+
+svg .icon {
+    fill: $color_dark_green;
+}
+
+svg:hover .icon {
+    fill: #333333;
+}
+
+a:focus .icon {
+    fill: #333333;
+}
+
+.icon-link {
+    text-decoration: none;
+
+    &:hover, &:hover {
+        text-decoration: none;
+    }
 }

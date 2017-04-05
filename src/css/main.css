@@ -373,12 +373,14 @@ template {
   border-sizing: border-box; }
 
 html, body {
+  padding: 0;
+  margin: 0;
   height: 100%;
   width: 100%;
   text-align: center;
-  background-color: #10f09e;
-  font-family: 'Arial';
-  color: #0b2517;
+  background-color: #c5ffe7;
+  font-family: 'Courier';
+  color: #114632;
   font-size: 16px; }
 
 h1 {
@@ -388,11 +390,14 @@ h1 {
   font-style: italic; }
 
 #root-container {
+  padding: 0;
+  margin: 0;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  justify-content: center;
+  align-items: stretch; }
 
 #menu {
   display: flex;
@@ -423,16 +428,18 @@ h1 {
   border: none;
   border-radius: 0.2rem;
   font-size: 2rem;
-  color: #0b2517;
+  color: #114632;
   background-color: #10CA7E;
   transition: background-color 100ms, color 100ms;
   outline: none; }
   .direction-button:hover, .direction-button:focus {
     outline: none;
-    background-color: #0b2517;
+    background-color: #114632;
     color: #10f09e; }
 
 #direction-pad {
+  align-self: center;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -446,3 +453,17 @@ h1 {
 
 .heart-img {
   width: 2rem; }
+
+svg .icon {
+  fill: #114632; }
+
+svg:hover .icon {
+  fill: #333333; }
+
+a:focus .icon {
+  fill: #333333; }
+
+.icon-link {
+  text-decoration: none; }
+  .icon-link:hover, .icon-link:hover {
+    text-decoration: none; }
