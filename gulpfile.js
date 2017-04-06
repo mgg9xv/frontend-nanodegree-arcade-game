@@ -75,6 +75,11 @@ gulp.task('generate-images', function() {
         .pipe(gulp.dest('src/images'))
 });
 
+gulp.task('fonts', function() {
+    return gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts'))
+})
+
 gulp.task('clean', function() {
     return del.sync('dist');
 })

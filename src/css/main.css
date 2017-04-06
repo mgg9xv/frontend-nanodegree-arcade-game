@@ -369,6 +369,13 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'Press Start 2P';
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/Press-Start-2P-regular/Press-Start-2P-regular.eot");
+  src: url("/fonts/Press-Start-2P-regular/Press-Start-2P-regular.eot?#iefix") format("embedded-opentype"), local("Press Start 2P Regular"), local("Press-Start-2P-regular"), url("/fonts/Press-Start-2P-regular/Press-Start-2P-regular.woff2") format("woff2"), url("/fonts/Press-Start-2P-regular/Press-Start-2P-regular.woff") format("woff"), url("/fonts/Press-Start-2P-regular/Press-Start-2P-regular.ttf") format("truetype"), url("/fonts/Press-Start-2P-regular/Press-Start-2P-regular.svg#PressStart2P") format("svg"); }
+
 * {
   border-sizing: border-box; }
 
@@ -474,16 +481,7 @@ a {
 
 .heart-img {
   fill: #133113;
-  width: 2rem; }
-
-svg .icon {
-  fill: #2b6a35; }
-
-svg:hover .icon {
-  fill: #333333; }
-
-a:focus .icon {
-  fill: #333333; }
+  width: 20%; }
 
 .icon-link {
   outline: none;
@@ -498,6 +496,6 @@ a:focus .icon {
 
 #score {
   vertical-align: top;
-  color: #2b6a35;
+  color: #111111;
   line-height: 24px;
   font-size: 16px; }

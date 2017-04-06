@@ -1,4 +1,5 @@
 @import "normalize";
+@import "fonts";
 
 $color_off_white: #f6f6f6;
 $black: #111111;
@@ -133,25 +134,11 @@ a {
 
 .heart-img {
     fill: $primary_dark;
-    width: 2rem;
-}
-
-svg .icon {
-    fill: $primary_mid;
-}
-
-svg:hover .icon {
-    fill: #333333;
-}
-
-a:focus .icon {
-    fill: #333333;
+    width: 20%;
 }
 
 .icon-link {
-
     outline: none;
-
     vertical-align: middle;
     text-decoration: none;
 
@@ -166,7 +153,7 @@ a:focus .icon {
 
 #score {
     vertical-align: top;
-    color: $primary_mid;
+    color: $black;
     line-height: 24px;
     font-size: 16px;
 }
