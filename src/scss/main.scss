@@ -1,9 +1,11 @@
 @import "normalize";
 
 $color_off_white: #f6f6f6;
-$color_light_green: #10f09e;
-$color_mid_green: #10CA7E;
-$color_dark_green: #114632;
+$black: #111111;
+$primary_light: #6ee798;
+$primary_mid: #2b6a35;
+$primary_dark: #133113;
+
 
 * {
     border-sizing: border-box;
@@ -15,17 +17,23 @@ html, body {
     height: 100%;
     width: 100%;
     text-align: center;
-    background-color: #c5ffe7;
-    font-family: 'Courier';
-    color: $color_dark_green;
+    background-color: $primary_light;
+    font-family: 'Press Start 2P', cursive;
+
     font-size: 16px;
 }
 
 h1 {
+    color: $primary_mid;
+    font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
     font-size: 2rem;
     font-style: italic;
+}
+
+a {
+    padding: 0;
 }
 
 #root-container {
@@ -40,9 +48,12 @@ h1 {
 }
 
 #menu {
-    //background-color: $color_dark_green;
+    height: 6rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .flex-box {
@@ -50,39 +61,56 @@ h1 {
     justify-content: space-around;
 }
 
-#stats-container {
+.row {
+    min-height: 2rem;
+    margin: 1rem 0.5rem 0 0.5rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.stat {
-    justify-content: center;
-    align-items: flex-end;
-}
-
-#lives {
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-#lives-count {
-    font-size: 1rem;
+.single-row {
+    min-height: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.half-row-width {
+    width: 50%;
+}
+
+.width-1-2 {
+    width: 50%;
+}
+
+.width-1-4 {
+    width: 25%;
+}
+
+#stats-container {
+    max-width: 400px;
 }
 
 .direction-button {
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
     font-size: 2rem;
-    color: $color-dark_green;
-    background-color: #10CA7E;
-    transition: background-color 100ms, color 100ms;
+    color: $primary_mid;
+    background-color: transparent;
+    transition: background-color 500ms, color 500ms, border 500ms;
     outline: none;
-    &:hover, &:focus {
-        outline: none;
-        background-color: $color_dark_green;
-        color: $color_light_green;
+    &:hover {
+        border: 2px solid $primary_mid;
+    }
+    &:focus, &:active {
+        color: $primary_dark;
+        border: 2px solid $primary_dark;
     }
 
 }
@@ -104,11 +132,12 @@ h1 {
 }
 
 .heart-img {
+    fill: $primary_dark;
     width: 2rem;
 }
 
 svg .icon {
-    fill: $color_dark_green;
+    fill: $primary_mid;
 }
 
 svg:hover .icon {
@@ -120,9 +149,25 @@ a:focus .icon {
 }
 
 .icon-link {
+
+    outline: none;
+
+    vertical-align: middle;
     text-decoration: none;
 
-    &:hover, &:hover {
-        text-decoration: none;
-    }
 }
+
+#github-icon {
+    border: 2px solid transparent;
+    fill: $primary_dark;
+    width: 24px;
+    height: 24px;
+}
+
+#score {
+    vertical-align: top;
+    color: $primary_mid;
+    line-height: 24px;
+    font-size: 16px;
+}
+

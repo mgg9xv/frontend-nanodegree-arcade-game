@@ -83,7 +83,7 @@ gulp.task('clean:dist', function() {
     return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
 });
 
-gulp.task('default', function(callback) {
+gulp.task('develop', function(callback) {
     runSequence(
         ['generate-images', 'sass', 'browserSync'],
         'watch',

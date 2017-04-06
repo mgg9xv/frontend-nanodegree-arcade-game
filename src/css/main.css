@@ -378,16 +378,20 @@ html, body {
   height: 100%;
   width: 100%;
   text-align: center;
-  background-color: #c5ffe7;
-  font-family: 'Courier';
-  color: #114632;
+  background-color: #6ee798;
+  font-family: 'Press Start 2P', cursive;
   font-size: 16px; }
 
 h1 {
+  color: #2b6a35;
+  font-family: 'Press Start 2P', cursive;
   margin: 0;
   padding: 0;
   font-size: 2rem;
   font-style: italic; }
+
+a {
+  padding: 0; }
 
 #root-container {
   padding: 0;
@@ -400,42 +404,59 @@ h1 {
   align-items: stretch; }
 
 #menu {
+  height: 6rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 .flex-box {
   display: flex;
   justify-content: space-around; }
 
-#stats-container {
+.row {
+  min-height: 2rem;
+  margin: 1rem 0.5rem 0 0.5rem;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-
-.stat {
-  justify-content: center;
-  align-items: flex-end; }
-
-#lives {
+  flex-direction: row;
   justify-content: center;
   align-items: center; }
 
-#lives-count {
-  font-size: 1rem; }
+.single-row {
+  min-height: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.half-row-width {
+  width: 50%; }
+
+.width-1-2 {
+  width: 50%; }
+
+.width-1-4 {
+  width: 25%; }
+
+#stats-container {
+  max-width: 400px; }
 
 .direction-button {
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 1rem;
+  border: 2px solid transparent;
   font-size: 2rem;
-  color: #114632;
-  background-color: #10CA7E;
-  transition: background-color 100ms, color 100ms;
+  color: #2b6a35;
+  background-color: transparent;
+  transition: background-color 500ms, color 500ms, border 500ms;
   outline: none; }
-  .direction-button:hover, .direction-button:focus {
-    outline: none;
-    background-color: #114632;
-    color: #10f09e; }
+  .direction-button:hover {
+    border: 2px solid #2b6a35; }
+  .direction-button:focus, .direction-button:active {
+    color: #133113;
+    border: 2px solid #133113; }
 
 #direction-pad {
   align-self: center;
@@ -452,10 +473,11 @@ h1 {
   justify-content: space-around; }
 
 .heart-img {
+  fill: #133113;
   width: 2rem; }
 
 svg .icon {
-  fill: #114632; }
+  fill: #2b6a35; }
 
 svg:hover .icon {
   fill: #333333; }
@@ -464,6 +486,18 @@ a:focus .icon {
   fill: #333333; }
 
 .icon-link {
+  outline: none;
+  vertical-align: middle;
   text-decoration: none; }
-  .icon-link:hover, .icon-link:hover {
-    text-decoration: none; }
+
+#github-icon {
+  border: 2px solid transparent;
+  fill: #133113;
+  width: 24px;
+  height: 24px; }
+
+#score {
+  vertical-align: top;
+  color: #2b6a35;
+  line-height: 24px;
+  font-size: 16px; }

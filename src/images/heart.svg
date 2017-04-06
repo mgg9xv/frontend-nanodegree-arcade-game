@@ -1,0 +1,10 @@
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="24" height="24" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <use id="transparent-background" stroke="#979797" mask="url(#mask-2)" stroke-width="2" fill="#D8D8D8" fill-rule="evenodd" opacity="0" xlink:href="#path-1"></use>
+    <path d="M12,20.3974397 C12,20.3974397 2,16.9979931 2,9.54109065 C2,6.17340928 4.5,4.00243104 7,4.00243104 C11.4983548,4.00243104 12,7.29493853 12,7.29493853 C12,7.29493853 12.4499998,3.8963864 17,4.00243104 C19.633803,4.0638158 22,6.93367101 22,9.54109065 C22,16.9711184 12,20.3974397 12,20.3974397 Z" id="Path-3" stroke="none" fill="#ff0000" fill-rule="evenodd"></path>
+</svg>

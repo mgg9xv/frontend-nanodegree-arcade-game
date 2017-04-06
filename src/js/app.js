@@ -149,7 +149,7 @@ function checkCollisions () {
 
 // Function updates the score shown to the user
 function updateScore() {
-    document.getElementById('score').innerHTML = 'Score: '+ score ;
+    document.getElementById('score').innerHTML = score.toString() ;
 }
 
 // Updates number of lives remaining on the screen. If no lives are left
@@ -158,7 +158,7 @@ function updateLives() {
     var livesHTML = '';
     var i = 0;
     while ( i < lives ) {
-        livesHTML += "<img class='heart-img' src='images/src/Heart.png'>";
+        livesHTML += "<img class='heart-img' src='images/heart.svg'>";
         i++;
     }
     document.getElementById('lives').innerHTML = livesHTML;
@@ -167,7 +167,7 @@ function updateLives() {
         alert("You have lost all your lives. Press OK to play again.");
         score = 0;
         updateScore();
-        lives = 10;
+        lives = 5;
         updateLives();
     }
 }
