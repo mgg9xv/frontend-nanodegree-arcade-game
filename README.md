@@ -1,20 +1,41 @@
-frontend-nanodegree-arcade-game
-===============================
+# Arcade Game | Frontend Nanodegree
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+The purpose of this project was to become familiar with the HTML5 canvas as well as JavaScript.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Quick Links
+* [Source Code](https://github.com/mggwxyz/frontend-nanodegree-arcade-game)
+* [Online Demo](https://mggwxyz.github.io/frontend-nanodegree-arcade-game)
 
-# Instructions
+## Table of Contents
+1. [Downloading the project](#downloading)
+1. [Running the project](#running)
+1. [How to play](#how-to-play)
 
-### Running the game
+## Downloading the project <a id="downloading"></a>
 
-In order to run the game one simply needs to navigate to the [github page](https://mggwxyz.github.io/frontend-nanodegree-arcade-game)
+1. Clone the git repository
 
-### Playing the game
+    ```
+    git clone https://github.com/mggwxyz/frontend-nanodegree-arcade-game.git
+    ```
+    
+## Running the project <a id="running"></a>
+>If you don't care to run the project locally, you can try it out at  [https://mggwxyz.github.io/pixelpad](https://mggwxyz.github.io/pixelpad)
 
-* Use the arrow keys to move the player forward, backwards, left, and right.
+1. Navigate into the `frontend-nanodegree-arcade-game` directory
+
+    ```
+    cd frontend-nanodegree-arcade-game
+    ```
+1. Open `index.html` using your favorite web browser
+    ```
+    open index.html
+    ```
+
+## How to play
+
+* Use the arrow keys  to move the player forward, backwards, left, and right.
 * The goal of the game is to get your player to other side of the road as many times as you can without dying.
 * If you touch the creepy crawlies, you will lose a life and will be brought back to the beginning side.
-* Lose all 10 lives and your game is over.
-* Don't worry, though. Just hit OK on the javascript alert and you can continue playing all day.
+* Lose all 5 lives and your game is over.
+* Don't worry, though. Just hit `OK` when the game ends and you can continue playing all day.
