@@ -14,7 +14,7 @@ The purpose of this project was to become familiar with the HTML5 canvas as well
 
 ## Downloading the project
 
-1. Clone the git repository
+Clone the git repository using a bash terminal
 
     ```
     git clone https://github.com/mggwxyz/frontend-nanodegree-arcade-game.git
