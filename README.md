@@ -17,7 +17,7 @@ The purpose of this project was to become familiar with the HTML5 canvas as well
 Clone the git repository using a bash terminal
 
 ```bash
-    git clone https://github.com/mggwxyz/frontend-nanodegree-arcade-game.git
+git clone https://github.com/mggwxyz/frontend-nanodegree-arcade-game.git
 ```
     
 ## Running the project 
@@ -29,12 +29,11 @@ Clone the git repository using a bash terminal
     cd frontend-nanodegree-arcade-game
     ```
 1. Start the application
-    > This command will triggle npm to download the node dependencies, run gulp, and then start up a local webserver at `http://127.0.0.1:3000`
 
     ```bash
     npm start
     ```
-
+    *This command will trigger npm to download the node dependencies, run gulp, and then start up a local web server at `http://127.0.0.1:3000`*
 ## How to play
 
 * Use the arrow keys  to move the player forward, backwards, left, and right.
