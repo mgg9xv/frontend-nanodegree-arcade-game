@@ -1,17 +1,18 @@
-# Arcade Game | Frontend Nanodegree
+# Udacity's Front-End Web Developer Nanodegree Arcade Game Project
 
 The purpose of this project was to become familiar with the HTML5 canvas as well as JavaScript.
 
 ## Quick Links
-* [Source Code](https://github.com/mggwxyz/frontend-nanodegree-arcade-game)
 * [Online Demo](https://mggwxyz.github.io/frontend-nanodegree-arcade-game)
+* [Source Code](https://github.com/mggwxyz/frontend-nanodegree-arcade-game)
+
 
 ## Table of Contents
-1. [Downloading the project](#downloading)
-1. [Running the project](#running)
+1. [Downloading the project](#downloading-the-project)
+1. [Running the project](#running-the-project)
 1. [How to play](#how-to-play)
 
-## Downloading the project <a id="downloading"></a>
+## Downloading the project
 
 1. Clone the git repository
 
@@ -19,8 +20,8 @@ The purpose of this project was to become familiar with the HTML5 canvas as well
     git clone https://github.com/mggwxyz/frontend-nanodegree-arcade-game.git
     ```
     
-## Running the project <a id="running"></a>
->If you don't care to run the project locally, you can try it out at  [https://mggwxyz.github.io/pixelpad](https://mggwxyz.github.io/pixelpad)
+## Running the project
+>If you don't care to run the project locally, you can try it out at  [https://mggwxyz.github.io/frontend-nanodegree-arcade-game](https://mggwxyz.github.io/frontend-nanodegree-arcade-game)
 
 1. Navigate into the `frontend-nanodegree-arcade-game` directory
 
