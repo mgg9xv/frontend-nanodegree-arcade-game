@@ -28,9 +28,11 @@ Clone the git repository using a bash terminal
     ```bash
     cd frontend-nanodegree-arcade-game
     ```
-1. Open `index.html` using your favorite web browser
+1. Start the application
+    > This command will triggle npm to download the node dependencies, run gulp, and then start up a local webserver at `http://127.0.0.1:3000`
+
     ```bash
-    open index.html
+    npm start
     ```
 
 ## How to play

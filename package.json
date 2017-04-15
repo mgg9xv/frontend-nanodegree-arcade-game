@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm install && gulp build && cd dist && http-server -o -p 3000",
     "dev-server": "gulp develop",
-    "prod-server": "gulp build && cd dist && http-server -p 3000",
+    "prod-server": "gulp build && cd dist && http-server -p -o 3000",
     "deploy": "gulp build && gh-pages -d dist"
   },
   "repository": {
