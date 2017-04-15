@@ -20,7 +20,7 @@ The purpose of this project was to become familiar with the HTML5 canvas as well
     git clone https://github.com/mggwxyz/frontend-nanodegree-arcade-game.git
     ```
     
-## Running the project
+## Running the project 
 >If you don't care to run the project locally, you can try it out at  [https://mggwxyz.github.io/frontend-nanodegree-arcade-game](https://mggwxyz.github.io/frontend-nanodegree-arcade-game)
 
 1. Navigate into the `frontend-nanodegree-arcade-game` directory
