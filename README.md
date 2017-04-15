@@ -16,20 +16,20 @@ The purpose of this project was to become familiar with the HTML5 canvas as well
 
 Clone the git repository using a bash terminal
 
-    ```
+```bash
     git clone https://github.com/mggwxyz/frontend-nanodegree-arcade-game.git
-    ```
+```
     
 ## Running the project 
 >If you don't care to run the project locally, you can try it out at  [https://mggwxyz.github.io/frontend-nanodegree-arcade-game](https://mggwxyz.github.io/frontend-nanodegree-arcade-game)
 
 1. Navigate into the `frontend-nanodegree-arcade-game` directory
 
-    ```
+    ```bash
     cd frontend-nanodegree-arcade-game
     ```
 1. Open `index.html` using your favorite web browser
-    ```
+    ```bash
     open index.html
     ```
 

@@ -1,18 +1,19 @@
 {
   "name": "frontend-nanodegree-arcade-game",
   "version": "1.0.0",
-  "description": "Arcade Game project for Udacity's Front-end Nanodgree",
-  "main": "./js/app.js",
+  "description": "An arcade game like Frogger for Udacity's Front-End Web Developer Nanodegree",
   "scripts": {
-    "start": "npm install && http-server",
-    "deploy": "gh-pages -d dist"
+    "start": "npm install && gulp build && cd dist && http-server -o -p 3000",
+    "dev-server": "gulp develop",
+    "prod-server": "gulp build && cd dist && http-server -p 3000",
+    "deploy": "gulp build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/mggwxyz/frontend-nanodegree-arcade-game.git"
   },
   "author": "Michael Gilbertson",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mggwxyz/frontend-nanodegree-arcade-game/issues"
   },
