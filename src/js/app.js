@@ -158,7 +158,7 @@ function updateLives() {
     var livesHTML = '';
     var i = 0;
     while ( i < lives ) {
-        livesHTML += "<img class='heart-img' src='images/heart.svg'>";
+        livesHTML += "<img class='heart-img' src='images/svg/heart.svg'>";
         i++;
     }
     document.getElementById('lives').innerHTML = livesHTML;
