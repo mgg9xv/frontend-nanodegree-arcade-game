@@ -58,7 +58,7 @@ gulp.task('optimize-files', function(){
 });
 
 gulp.task('copy-images-to-dist', function() {
-    return gulp.src('src/images/*')
+    return gulp.src('src/images/**/*')
         .pipe(imagemin({
             interlaced: true,
         }))
