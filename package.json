@@ -4,8 +4,8 @@
   "description": "An arcade game like Frogger for Udacity's Front-End Web Developer Nanodegree",
   "scripts": {
     "start": "npm install && gulp build && cd dist && http-server -o -p 3000",
-    "dev-server": "gulp develop",
-    "prod-server": "gulp build && cd dist && http-server -p -o 3000",
+    "dev": "gulp develop",
+    "demo": "gulp build && cd dist && http-server -p -o 3000",
     "deploy": "gulp build && gh-pages -d dist"
   },
   "repository": {
@@ -29,6 +29,7 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.2.0",
+    "gulp-pug": "^3.3.0",
     "gulp-responsive": "^2.7.0",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.1.2",

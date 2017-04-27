@@ -1,0 +1,48 @@
+doctype html
+html(lang='en-us')
+    head
+        title Arcade Game | Front-End Nanodegree
+
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+        link(href='images/arcade-game-favicon.ico' rel='icon' type='image/x-icon')
+
+        // build:css stylesheets/css/main.min.css
+        link(href='stylesheets/css/main.css' rel='stylesheet')
+        // endbuild
+    body
+
+        #root-container
+            #menu
+                header.row
+                    h1 Arcade Game
+                #stats-container.row
+                    .width-1-4
+                        include ../images/running-man-icon.svg
+                        span#score.half-row-width 0
+
+                    #lives.half-row-width.single-row
+                        - for (var i = 0; i < 5; i++)
+                            img.heart-img(src='images/heart.svg')
+
+                    .width-1-4
+                        a.icon-link(title='Source Code' href='https://github.com/mggwxyz/frontend-nanodegree-arcade-game')
+                            include ../images/github-icon.svg
+
+            #game.flex-item
+
+            #direction-pad
+                .direction-pad-row
+                    button#up-arrow.direction-button &uarr;
+                .direction-pad-row
+                    button#left-arrow.direction-button &larr;
+                    button#right-arrow.direction-button &rarr;
+                .direction-pad-row
+                    button#down-arrow.direction-button &darr;
+
+        //build:js js/main.min.js
+        script(src='js/resources.js')
+        script(src='js/app.js')
+        script(src='js/engine.js')
+        //endbuild
