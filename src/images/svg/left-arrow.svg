@@ -1,0 +1,5 @@
+<svg class="arrow" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="rotate(270 12 12)">
+        <path fill="#000000" d="M4 18 12 6 20 18z"></path>
+    </g>
+</svg>

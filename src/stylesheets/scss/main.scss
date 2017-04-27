@@ -2,10 +2,14 @@
 @import "fonts";
 
 $color_off_white: #f6f6f6;
+$light-gray: #e3e3e3;
+$medium-gray: #c0c0c0;
+$dark-gray: #727272;
 $black: #111111;
 $primary_light: #6ee798;
 $primary_mid: #2b6a35;
 $primary_dark: #133113;
+$highlight: #54c3ff;
 
 
 * {
@@ -98,22 +102,40 @@ a {
 }
 
 .direction-button {
+    margin: 0.25rem;
+    outline: none;
     border: none;
-    border-radius: 1rem;
-    border: 2px solid transparent;
+    border-radius: 4px;
+    border-bottom: 1rem solid $medium-gray;
+
     font-size: 2rem;
     color: $primary_mid;
-    background-color: transparent;
-    transition: background-color 500ms, color 500ms, border 500ms;
-    outline: none;
-    &:hover {
-        border: 2px solid $primary_mid;
-    }
-    &:focus, &:active {
-        color: $primary_dark;
-        border: 2px solid $primary_dark;
+
+    background-color: $light-gray;
+
+    transition: border-bottom 250ms;
+
+    &:hover, &:focus  {
+      border-bottom: 0.75rem solid $medium-gray;
+      cursor: pointer;
     }
 
+    &:hover path  {
+      fill: $highlight;
+    }
+
+    &:active {
+      border-bottom: 0.5rem solid $medium-gray;
+    }
+
+}
+
+.arrow {
+  width: 100%;
+
+  & path {
+    fill: $dark-gray;
+  }
 }
 
 #direction-pad {
@@ -129,7 +151,9 @@ a {
 
 .direction-pad-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+  align-items: flex-end;
+  min-height: 4rem;
 }
 
 .heart-img {

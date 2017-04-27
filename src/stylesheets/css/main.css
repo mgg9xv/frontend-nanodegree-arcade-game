@@ -451,19 +451,27 @@ a {
   max-width: 400px; }
 
 .direction-button {
+  margin: 0.25rem;
+  outline: none;
   border: none;
-  border-radius: 1rem;
-  border: 2px solid transparent;
+  border-radius: 4px;
+  border-bottom: 1rem solid #c0c0c0;
   font-size: 2rem;
   color: #2b6a35;
-  background-color: transparent;
-  transition: background-color 500ms, color 500ms, border 500ms;
-  outline: none; }
-  .direction-button:hover {
-    border: 2px solid #2b6a35; }
-  .direction-button:focus, .direction-button:active {
-    color: #133113;
-    border: 2px solid #133113; }
+  background-color: #e3e3e3;
+  transition: border-bottom 250ms; }
+  .direction-button:hover, .direction-button:focus {
+    border-bottom: 0.75rem solid #c0c0c0;
+    cursor: pointer; }
+  .direction-button:hover path {
+    fill: #54c3ff; }
+  .direction-button:active {
+    border-bottom: 0.5rem solid #c0c0c0; }
+
+.arrow {
+  width: 100%; }
+  .arrow path {
+    fill: #727272; }
 
 #direction-pad {
   align-self: center;
@@ -477,7 +485,9 @@ a {
 
 .direction-pad-row {
   display: flex;
-  justify-content: space-around; }
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 4rem; }
 
 .heart-img {
   fill: #133113;

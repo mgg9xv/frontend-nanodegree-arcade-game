@@ -19,27 +19,31 @@ html(lang='en-us')
                     h1 Arcade Game
                 #stats-container.row
                     .width-1-4
-                        include ../images/running-man-icon.svg
+                        include ../images/svg/running-man-icon.svg
                         span#score.half-row-width 0
 
                     #lives.half-row-width.single-row
                         - for (var i = 0; i < 5; i++)
-                            img.heart-img(src='images/heart.svg')
+                            img.heart-img(src='images/svg/heart.svg')
 
                     .width-1-4
                         a.icon-link(title='Source Code' href='https://github.com/mggwxyz/frontend-nanodegree-arcade-game')
-                            include ../images/github-icon.svg
+                            include ../images/svg/github-icon.svg
 
             #game.flex-item
 
             #direction-pad
                 .direction-pad-row
-                    button#up-arrow.direction-button &uarr;
+                    button#up-arrow.direction-button
+                        include ../images/svg/up-arrow.svg
                 .direction-pad-row
-                    button#left-arrow.direction-button &larr;
-                    button#right-arrow.direction-button &rarr;
-                .direction-pad-row
-                    button#down-arrow.direction-button &darr;
+                    button#left-arrow.direction-button
+                        include ../images/svg/left-arrow.svg
+                    button#down-arrow.direction-button
+                        include ../images/svg/down-arrow.svg
+                    button#right-arrow.direction-button
+                        include ../images/svg/right-arrow.svg
+
 
         //build:js js/main.min.js
         script(src='js/resources.js')
