@@ -27,21 +27,21 @@ html(lang='en')
                             img.heart-img(src='images/svg/heart.svg')
 
                     .width-1-4
-                        a.icon-link(title='Source Code' href='https://github.com/mggwxyz/frontend-nanodegree-arcade-game')
+                        a#github-icon-link(title='Source Code' href='https://github.com/mggwxyz/frontend-nanodegree-arcade-game')
                             include ../images/svg/github-icon.svg
 
             #game.flex-item
 
             #direction-pad
                 .direction-pad-row
-                    button#up-arrow.direction-button
+                    button#up-arrow.direction-button(title='Move forwards')
                         include ../images/svg/up-arrow.svg
                 .direction-pad-row
-                    button#left-arrow.direction-button
+                    button#left-arrow.direction-button(title='Move left')
                         include ../images/svg/left-arrow.svg
-                    button#down-arrow.direction-button
+                    button#down-arrow.direction-button(title='Move backwards')
                         include ../images/svg/down-arrow.svg
-                    button#right-arrow.direction-button
+                    button#right-arrow.direction-button(title='Move right')
                         include ../images/svg/right-arrow.svg
 
 
