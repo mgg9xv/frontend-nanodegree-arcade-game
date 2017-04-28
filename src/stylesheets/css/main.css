@@ -496,7 +496,10 @@ a {
 .icon-link {
   outline: none;
   vertical-align: middle;
-  text-decoration: none; }
+  text-decoration: none;
+  background-color: #e3e3e3;
+  height: 20rem;
+  width: 2rem; }
 
 #github-icon {
   border: 2px solid transparent;
